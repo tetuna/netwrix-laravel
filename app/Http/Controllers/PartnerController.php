@@ -11,13 +11,13 @@ class PartnerController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * 
+     *
      * @return JsonResponse
      */
     public function index()
     {
         return response()->json([
-            'data' => Partner::get(),
+            'partners' => Partner::get(),
             'countries' => Country::get()
         ]);
     }
@@ -29,21 +29,8 @@ class PartnerController extends Controller
      */
     public function search(Request $request)
     {
-        // $countries_covered = str_replace(str_split('["]'), '', $this->countries_covered);
-        // $res = explode(',',$countries_covered);
-
-        // $countries = Country::when(
-        //     $request->get('search_company'),
-        //     function ($query, $keyword) {
-        //         return $query->where('company', 'like', '%' . $keyword . '%')
-        //             ->orWhere('address', 'like', '%' . $keyword . '%');
-        //     }
-        // )->get();
-        // dd($countries);
-
-
         return response()->json([
-            'data' => Partner::
+            'partners' => Partner::
             when(
                 $request->get('search_company'),
                 function ($query, $search_company) {
@@ -70,9 +57,7 @@ class PartnerController extends Controller
                     function ($query, $state) {
                         return $query->where('states_covered', 'like', '%"' . $state . '"%');
                     }
-                )
-                
-                ->get()
+                )->get()
         ]);
     }
 }

@@ -28,7 +28,7 @@ class StateController extends Controller
     public function searchByCountry(Request $request)
     {
         return response()->json([
-            'data' => State::where('country_id', $request->get('country'))->get()
+            'states' => State::where('country_id', $request->get('country'))->get()
         ]);
 
     }
