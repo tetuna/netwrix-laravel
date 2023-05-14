@@ -21,10 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/hello', function (Request $request) {
-    return "Hello Netwrix!";
-});
-
 Route::get('countries', [CountryController::class, 'index']);
 Route::get('states', [StateController::class, 'index']);
 Route::get('states/search-by-country', [StateController::class, 'searchByCountry']);
