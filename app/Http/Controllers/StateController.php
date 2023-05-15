@@ -30,6 +30,5 @@ class StateController extends Controller
         return response()->json([
             'states' => State::where('country_id', $request->get('country'))->get()
         ]);
-
     }
 }
