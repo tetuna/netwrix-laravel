@@ -11,7 +11,7 @@ Design link:
 <br/>
 Design link .fig file: 
 <br/>
-<a href="https://gtd.ge/github-data/netwrix/docs/design.pdf" target="_blank">Click here for download</a>
+<a href="https://gtd.ge/github-data/netwrix/docs/design.fig" target="_blank">Click here for download</a>
 <br/>
 <br/>
 Attached database files:
