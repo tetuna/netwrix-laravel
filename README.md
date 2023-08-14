@@ -1,4 +1,4 @@
-# Netwrix Mid Web Developer test assignment.
+# Netwrix Middle Web Developer test assignment.
 Task description link:
 <br/>
 <a href="https://gtd.ge/github-data/netwrix/docs/description.pdf" target="_blank">Click here for PDF file!</a>
